@@ -1,6 +1,8 @@
 import subprocess
 import json
-
+import os
+dirname = os.path.dirname(__file__)
+print(dirname)
 cookiecutter = json.load(open('../cookiecutter.json', 'r', encoding="utf-8"))
 
 
