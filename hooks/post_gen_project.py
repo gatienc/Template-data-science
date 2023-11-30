@@ -1,4 +1,5 @@
 import subprocess
+from collections import OrderedDict
 
 cookiecutter = {{cookiecutter}}
 
