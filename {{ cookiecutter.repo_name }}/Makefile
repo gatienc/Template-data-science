@@ -7,7 +7,7 @@
 PROJECT_NAME = {{ cookiecutter.repo_name }}
 DESCRIPTION = {{ cookiecutter.description }}
 REPO_NAME = {{ cookiecutter.repo_name }}
-LICENCE= {{ cookiecutter.license }}
+LICENCE= {{ cookiecutter.open_source_license }}
 AUTHOR= {{ cookiecutter.author_name }}
 
 
