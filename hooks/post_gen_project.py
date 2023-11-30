@@ -20,3 +20,4 @@ if __name__ == '__main__':
 
     if cookiecutter["use_github"] == 'y':
         github_init()
+    subprocess.call(['make', 'create_environment'])
