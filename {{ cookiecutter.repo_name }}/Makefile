@@ -61,15 +61,15 @@ endif
 ifeq ($(VIRTUAL_ENV), venv)
 
 
-	if [ -d ./.venv_$(REPO_NAME) ]; \
+	if [ -d ./.$(REPO_NAME)_env ]; \
 		then \
 			echo ">>> Virtual environment for $(REPO_NAME) already exists"; \
 		else \
 			echo ">>> Installing virtual environment for $(REPO_NAME)"; \
-			python3 -m venv ./.venv_$(REPO_NAME); \
-			echo ">>> New virtualenv created at ./.venv_$(REPO_NAME)"; \
-			echo ">>> Activate with:\nsource ./.venv_$(REPO_NAME)/bin/activate"; \
-			source ./.venv_$(REPO_NAME)/bin/activate && \
+			python3 -m venv ./.$(REPO_NAME)_env; \
+			echo ">>> New virtualenv created at ./.$(REPO_NAME)_env"; \
+			echo ">>> Activate with:\nsource ./.$(REPO_NAME)_env/bin/activate"; \
+			bash ./.$(REPO_NAME)_env/bin/activate && \
 			python3 -m pip install -U pip setuptools wheel && \
 			python3 -m pip install -r requirements.txt; \
 		fi
