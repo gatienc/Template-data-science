@@ -60,17 +60,15 @@ ifeq ($(VIRTUAL_ENV), poetry)
 else ifeq ($(VIRTUAL_ENV), venv)
 
 
-	if [ -d ./.$(REPO_NAME)_env ]; \
+	if [ -d ./.venv ]; \
 		then \
 			echo ">>> Virtual environment for $(REPO_NAME) already exists"; \
 		else \
 			echo ">>> Installing virtual environment for $(REPO_NAME)"; \
-			python3 -m venv ./.$(REPO_NAME)_env; \
-			echo ">>> New virtualenv created at ./.$(REPO_NAME)_env"; \
-			echo ">>> Activate with:\nsource ./.$(REPO_NAME)_env/bin/activate"; \
-			bash ./.$(REPO_NAME)_env/bin/activate && \
-			python3 -m pip install -U pip setuptools wheel && \
-			python3 -m pip install -r requirements.txt; \
+			python3 -m venv ./.venv; \
+			echo ">>> New virtualenv created at ./.venv"; \
+			echo ">>> Activate with:\nsource ./.venv/bin/activate"; \
+			./.venv/bin/pip install -r requirements.txt; \
 		fi
 else
 	@echo ">>> virtual_env must be either 'venv' or 'poetry'"
