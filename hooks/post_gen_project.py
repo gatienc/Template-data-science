@@ -1,7 +1,7 @@
 import subprocess
 import json
 
-cookiecutter = json.load(open('cookiecutter.json', 'r', encoding="utf-8"))
+cookiecutter = json.load(open('../cookiecutter.json', 'r', encoding="utf-8"))
 
 
 def git_init():
