@@ -57,8 +57,7 @@ ifeq ($(VIRTUAL_ENV), poetry)
 	' > pyproject.toml
 
 
-endif
-ifeq ($(VIRTUAL_ENV), venv)
+else ifeq ($(VIRTUAL_ENV), venv)
 
 
 	if [ -d ./.$(REPO_NAME)_env ]; \
@@ -73,12 +72,8 @@ ifeq ($(VIRTUAL_ENV), venv)
 			python3 -m pip install -U pip setuptools wheel && \
 			python3 -m pip install -r requirements.txt; \
 		fi
-endif
-ifneq ("$(VIRTUAL_ENV)", "poetry")
-	ifneq ("$(VIRTUAL_ENV)", "venv")
-		@echo ">>> virtual_env must be either 'venv' or 'poetry'"
-	endif
-	endif
+else
+	@echo ">>> virtual_env must be either 'venv' or 'poetry'"
 endif
 
 # ## Test python environment is setup correctly
