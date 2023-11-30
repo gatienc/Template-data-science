@@ -20,10 +20,6 @@ requirements: test_environment
 	python3 -m pip install -U pip setuptools wheel
 	python3 -m pip install -r requirements.txt
 
-## Make Dataset
-data: requirements
-	python3 src/data/make_dataset.py data/raw data/processed
-
 ## Delete all compiled Python files
 clean:
 	find . -type f -name "*.py[co]" -delete
