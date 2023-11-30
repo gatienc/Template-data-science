@@ -9,6 +9,7 @@ DESCRIPTION = {{ cookiecutter.description }}
 REPO_NAME = {{ cookiecutter.repo_name }}
 LICENCE= {{ cookiecutter.open_source_license }}
 AUTHOR= {{ cookiecutter.author_name }}
+VIRTUAL_ENV= {{ cookiecutter.virtual_env }}
 
 
 #################################################################################
@@ -32,7 +33,7 @@ lint:
 
 ## Set up python interpreter environment
 create_environment:
-ifeq ($(virtual_env), poetry)
+ifeq ($(VIRTUAL_ENV), poetry)
 
 	@echo '>>> Installing virtual environment for $(PROJECT_NAME), using poetry"
 	poetry init --no-interaction
@@ -57,7 +58,7 @@ ifeq ($(virtual_env), poetry)
 
 
 endif
-ifeq ($(virtual_env), venv)
+ifeq ($(VIRTUAL_ENV), venv)
 
 
 	if [ -d ./.venv_$(REPO_NAME) ]; \
@@ -73,8 +74,8 @@ ifeq ($(virtual_env), venv)
 			python3 -m pip install -r requirements.txt; \
 		fi
 endif
-ifneq ($(virtual_env), poetry)
-	ifneq ($(virtual_env), venv)
+ifneq ($(VIRTUAL_ENV), poetry)
+	ifneq ($(VIRTUAL_ENV), venv)
 		@echo ">>> virtual_env must be either 'venv' or 'poetry'"
 	endif
 endif
