@@ -74,9 +74,10 @@ ifeq ($(VIRTUAL_ENV), venv)
 			python3 -m pip install -r requirements.txt; \
 		fi
 endif
-ifneq ($(VIRTUAL_ENV), poetry)
-	ifneq ($(VIRTUAL_ENV), venv)
+ifneq ("$(VIRTUAL_ENV)", "poetry")
+	ifneq ("$(VIRTUAL_ENV)", "venv")
 		@echo ">>> virtual_env must be either 'venv' or 'poetry'"
+	endif
 	endif
 endif
 
