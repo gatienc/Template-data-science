@@ -2,8 +2,23 @@
   "project_name": "project_name",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
   "author_name": "Gatien CHENU",
+  "email": "gatien+dev@chenu.me",
   "description": "A short description of {{ cookiecutter.project_name}}.",
-  "open_source_license": ["MIT", "BSD-3-Clause", "No license file"],
-  "virtual_env": ["venv", "poetry"],
-  "use_github": ["y", "n"]
+  "open_source_license": [
+    "MIT",
+    "BSD-3-Clause",
+    "No license file"
+  ],
+  "virtual_env": [
+    "venv",
+    "poetry"
+  ],
+  "use_github": [
+    "y",
+    "n"
+  ],
+  "use_mlflow": [
+    "y",
+    "n"
+  ],
 }

@@ -156,7 +156,7 @@ To get a local copy up and running follow these simple steps.
 
 ## Contact
 
-Gatien Chenu - gatien_dev@chenu.me
+$(AUTHOR) - $(EMAIL)
 
 Project Link: [https://github.com/gatienc/# {{cookiecutter.project_name}}
 /issues](https://github.com/gatienc/# {{cookiecutter.project_name}}

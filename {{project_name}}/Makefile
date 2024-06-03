@@ -6,6 +6,7 @@
 
 PROJECT_NAME = {{ cookiecutter.project_name }}
 DESCRIPTION = {{ cookiecutter.description }}
+EMAIL = {{ cookiecutter.email }}
 REPO_NAME = {{ cookiecutter.repo_name }}
 LICENCE= {{ cookiecutter.open_source_license }}
 AUTHOR= {{ cookiecutter.author_name }}
@@ -40,7 +41,7 @@ ifeq ($(VIRTUAL_ENV), poetry)
 	'	name = "$(PROJECT_NAME)"' \
 	'	version = "0.1.0"' \
 	'	description = "$(DESCRIPTION)"' \
-	'	authors = ["$(AUTHOR) <you@example.com>"]' \
+	'	authors = ["$(AUTHOR) <$(EMAIL)>"]' \
 	'	readme = "README.md"' \
 	'	license = "$(LICENCE)"' \
 	'	readme = "README.md"' \
