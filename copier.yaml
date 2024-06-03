@@ -1,0 +1,11 @@
+project_name: mypackage
+package_description: A short description of the package.
+author_name: Cecron
+author_email: Cecron@example.com
+copyright_license: "MIT"
+_tasks:
+- python scripts/post_generation.py
+_exclude:
+    - ".git"
+    # Don't match emacs backup files
+    - "*~"
