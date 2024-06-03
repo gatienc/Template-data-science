@@ -34,45 +34,39 @@ lint:
 ## Set up python interpreter environment
 create_environment:
 ifeq ($(VIRTUAL_ENV), poetry)
-
-	@echo '>>> Installing virtual environment for $(PROJECT_NAME), using poetry"
+	@echo ">>> Installing virtual environment for $(PROJECT_NAME), using poetry"
 	poetry init --no-interaction
-	echo '[tool.poetry]\
-	name = "$(PROJECT_NAME)"\
-	version = "0.1.0"\
-	description = "$(DESCRIPTION)"\
-	authors = ["$(AUTHOR) <you@example.com>"]\
-	readme = "README.md"\
-	license = "$(LICENCE)"\
-	readme = "README.md"\
-	homepage = "https://github.com/$(REPO_NAME)"\
-	repository = "https://github.com/$(REPO_NAME)"\
-
-	[tool.poetry.dependencies]\
-	python = "^3.10"\
-
-	[build-system]\
-	requires = ["poetry-core"]\
-	build-backend = "poetry.core.masonry.api""
-	' > pyproject.toml
-
-
+	echo '[tool.poetry]' \
+	'	name = "$(PROJECT_NAME)"' \
+	'	version = "0.1.0"' \
+	'	description = "$(DESCRIPTION)"' \
+	'	authors = ["$(AUTHOR) <you@example.com>"]' \
+	'	readme = "README.md"' \
+	'	license = "$(LICENCE)"' \
+	'	readme = "README.md"' \
+	'	homepage = "https://github.com/$(REPO_NAME)"' \
+	'	repository = "https://github.com/$(REPO_NAME)"' \
+	'	[tool.poetry.dependencies]' \
+	'		python = "^3.10"' \
+	'	[build-system]' \
+	'	requires = ["poetry-core"]' \
+	'	build-backend = "poetry.core.masonry.api"' \
+	'	' > pyproject.toml
 else ifeq ($(VIRTUAL_ENV), venv)
-
-
-	if [ -d ./.venv ]; \
+	if [ -d./.venv ]; \
 		then \
 			echo ">>> Virtual environment for $(REPO_NAME) already exists"; \
 		else \
 			echo ">>> Installing virtual environment for $(REPO_NAME)"; \
-			python3 -m venv ./.venv; \
-			echo ">>> New virtualenv created at ./.venv"; \
-			echo ">>> Activate with:\nsource ./.venv/bin/activate"; \
+			python3 -m venv./.venv; \
+			echo ">>> New virtualenv created at./.venv"; \
+			echo ">>> Activate with:\nsource./.venv/bin/activate"; \
 			./.venv/bin/pip install -r requirements.txt; \
 		fi
 else
 	@echo ">>> virtual_env must be either 'venv' or 'poetry'"
 endif
+
 
 # ## Test python environment is setup correctly
 # test_environment:
