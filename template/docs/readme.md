@@ -4,6 +4,8 @@ Install requirements:
 
     pip install -r requirements.txt
 
+
+
 Change directories into the docs folder:
 
     cd docs

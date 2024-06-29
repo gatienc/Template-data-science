@@ -1,0 +1,35 @@
+project_name:
+    type: str
+    help: What is your project name?
+author_name:
+    type: str
+    default: "Gatien CHENU"
+
+description:
+    type: str
+    default: "A short description of {{project_name}}."
+
+project_license:
+    choices:
+        MIT: "MIT"
+        Apache2: "Apache2"
+        BSD-3-Clause: "BSD-3-Clause"
+        None: "None"
+    type: str
+
+virtual_env:
+    choices:
+        venv: "venv"
+        poetry: "poetry"
+
+git:
+    choices:
+        personal-github: "personal-github"
+        none: "none"
+    default: "personal-github"
+    type: str
+
+use_precommit:
+    type: bool
+    default: false
+    help: Do you want to use pre-commit?

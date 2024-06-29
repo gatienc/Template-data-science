@@ -9,7 +9,6 @@ plugins:
 
 nav: # Setting up the navigation. Te below list will be tabs on left panel
   - index.md
-  - Models.md # A markdown to list all the models
 
 markdown_extensions:
   - pymdownx.superfences:
