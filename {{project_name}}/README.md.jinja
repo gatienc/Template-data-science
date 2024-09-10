@@ -10,12 +10,12 @@
 -->
 
 <!-- [![Contributors][contributors-shield]][contributors-url] -->
+
 [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-border.json)](https://github.com/copier-org/copier)
 [![GitHub license](https://img.shields.io/github/license/gatienc/{{project_name}})](https://github.com/gatienc/{{project_name}}/blob/master/LICENSE)
 [![GitHub commits](https://badgen.net/github/commits/gatienc/{{project_name}})](https://GitHub.com/gatienc/{{project_name}}/commit/)
 [![GitHub latest commit](https://badgen.net/github/last-commit/gatienc/{{project_name}})](https://gitHub.com/gatienc/{{project_name}}/commit/)
 [![Author](https://img.shields.io/badge/author-@gatienc-blue)](https://github.com/gatienc)
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -90,20 +90,22 @@ To get a local copy up and running follow these simple steps.
    git clone https://github.com/gatienc/{{project_name}}
    ```
 2. Install dependencies
-    ```sh
-    {% if virtual_env=="venv" %}
-    pip install -r requirements.txt
-    {% elif virtual_env=="poetry" %}
-    poetry install
-    {% endif %}
+   ```sh
+   {% if virtual_env=="venv" %}
+   pip install -r requirements.txt
+   {% elif virtual_env=="poetry" %}
+   poetry install
+   {% endif %}
    ```
-   
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Project Organization
 
     ├── LICENSE
+    │
     ├── README.md          <- The top-level README for developers using this project.
+    │
     ├── data               <- Data folder for the project
     │
     ├── docs               <- A MkDocs documentation
@@ -111,13 +113,11 @@ To get a local copy up and running follow these simple steps.
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks          <- Jupyter notebooks.
-    │                         
+    │
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
     │
-    ├── ? requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `pip freeze > requirements.txt`
     │
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
@@ -127,7 +127,7 @@ To get a local copy up and running follow these simple steps.
     │   │  
     │   │
     │   ├── models         <- Scripts to train models and then use trained models to make predictions
-        │                   
+        │
         │
         └── visualization  <- Scripts to create exploratory and results oriented visualizations
             └── visualize.py
@@ -139,4 +139,3 @@ Gatien Chenu - gatien_dev@chenu.me
 Project Link: https://github.com/gatienc/{{project_name}}/issues
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
