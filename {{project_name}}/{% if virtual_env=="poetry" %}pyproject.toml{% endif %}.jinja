@@ -10,12 +10,11 @@ authors = ["{{ author_name }} <{{ author_email }}>"]
 license = "{{ project_license }}"
 readme = "README.md"
 
-
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
 
 [tool.poetry.dev-dependencies]
-# formatting, quality, tests
+# Formatting, quality, tests
 black = "^23.10.1"
 flake8 = "^6.1.0"
 ipykernel = "^6.29.4"
@@ -26,15 +25,14 @@ pre-commit = "^3.4.0"
 pytest = "^7.4.2"
 pytest-cov = "^4.1.0"
 
-# tasks
+# Tasks
 duty = ">=0.6.0"
 git-changelog = ">=0.5.0"
 httpx = ">=0.16.1"
 jinja2-cli = ">=0.7.0"
 toml = ">=0.10.2"
 
-# flake8 plugins
-flake8 = ">=3.7.0"
+# Flake8 plugins
 flake8-bandit = ">=2.1.2"
 flake8-black = ">=0.2.1"
 flake8-bugbear = ">=20.11.1"
@@ -47,13 +45,12 @@ flake8-variables-names = ">=0.0.4"
 pep8-naming = ">=0.11.1"
 pydocstyle = ">=6.1.1"
 
-# docs
+# Documentation
 mkdocs = ">=1.2.2"
 mkdocs-coverage = ">=0.2.1"
 mkdocs-macros-plugin = ">=0.5.0"
 mkdocs-material = ">=6.2.7"
 mkdocstrings = ">=0.16.2"
-
 
 [tool.black]
 exclude = "/(.venv)/"
@@ -65,5 +62,11 @@ force_grid_wrap = 0
 include_trailing_comma = true
 line_length = 110
 multi_line_output = 3
-skip_glob = ["**/.env*", "**/env/*", "**/.venv/*", "**/docs/*", "*.ipynb", "skip_glob", "**/app.py"]
+skip_glob = [
+    "**/.env*",
+    "**/env/*",
+    "**/.venv/*",
+    "**/docs/*",
+    "*.ipynb"
+]
 use_parentheses = true
