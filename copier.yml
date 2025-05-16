@@ -22,17 +22,6 @@ project_license:
         None: "None"
     type: str
 
-virtual_env:
-    choices:
-        venv: "venv"
-        poetry: "poetry"
-git:
-    choices:
-        personal-github: "personal-github"
-        none: "none"
-    default: "personal-github"
-    type: str
-
 use_precommit:
     type: bool
     default: true
