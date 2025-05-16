@@ -1,0 +1,71 @@
+[build-system]
+build-backend = "uv"
+requires = ["uv"]
+
+[project]
+name = "{{ project_name }}"
+version = "0.1.0"
+description = "{{ description }}"
+authors = ["{{ author_name }} <{{ author_email }}>"]
+license = "{{ project_license }}"
+readme = "README.md"
+
+[tool.uv]
+dev-dependencies = [
+    # Formatting, quality, tests
+    "black>=23.10.1",
+    "flake8>=6.1.0",
+    "ipykernel>=6.29.4",
+    "ipywidgets>=8.1.2",
+    "isort>=5.12.0",
+    "notebook>=7.0.4",
+    "pre-commit>=3.4.0",
+    "pytest>=7.4.2",
+    "pytest-cov>=4.1.0",
+
+    # Tasks
+    "duty>=0.6.0",
+    "git-changelog>=0.5.0",
+    "httpx>=0.16.1",
+    "jinja2-cli>=0.7.0",
+    "toml>=0.10.2",
+
+    # Flake8 plugins
+    "flake8-bandit>=2.1.2",
+    "flake8-black>=0.2.1",
+    "flake8-bugbear>=20.11.1",
+    "flake8-builtins>=1.5.3",
+    "flake8-comprehensions>=3.3.1",
+    "flake8-docstrings>=1.5.0",
+    "flake8-string-format>=0.3.0",
+    "flake8-tidy-imports>=4.2.1",
+    "flake8-variables-names>=0.0.4",
+    "pep8-naming>=0.11.1",
+    "pydocstyle>=6.1.1",
+
+    # Documentation
+    "mkdocs>=1.2.2",
+    "mkdocs-coverage>=0.2.1",
+    "mkdocs-macros-plugin>=0.5.0",
+    "mkdocs-material>=6.2.7",
+    "mkdocstrings>=0.16.2",
+]
+
+[tool.black]
+exclude = "/(.venv)/"
+line-length = 110
+
+[tool.isort]
+ensure_newline_before_comments = true
+force_grid_wrap = 0
+include_trailing_comma = true
+line_length = 110
+multi_line_output = 3
+skip_glob = [
+    "**/.env*",
+    "**/env/*",
+    "**/.venv/*",
+    "**/docs/*",
+    "*.ipynb"
+]
+use_parentheses = true

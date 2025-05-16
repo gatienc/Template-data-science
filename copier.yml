@@ -35,5 +35,5 @@ git:
 
 use_precommit:
     type: bool
-    default: false
+    default: true
     help: Do you want to use pre-commit?
